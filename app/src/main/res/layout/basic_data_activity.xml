@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="name"
+            type="String"/>
+        <variable
+            name="age"
+            type="int" />
+
+        <variable
+            name="nickName"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="50sp"
+            android:text='@{"my name is: " + name}' />
+
+        <!--notice：the type of age is int，it must be convert to String, or it will has exception
+        and need import android.view.View for android:visibility -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="50sp"
+            android:visibility="@{age &lt; 13 ? View.GONE : View.VISIBLE}"
+            android:text="@{String.valueOf(age)}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="50sp"
+            android:text="@{nickName ?? name}"/>
+        <!-- same as @{nickName != null ? nickName : name} -->
+    </LinearLayout>
+</layout>

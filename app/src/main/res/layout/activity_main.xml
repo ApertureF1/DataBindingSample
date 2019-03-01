@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="user"
+            type="com.example.jiali.databindingsample.User" />
+
+        <variable
+            name="handlerClick"
+            type="com.example.jiali.databindingsample.OnClickHandler" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="50sp"
+            android:text="@{user.name}" />
+
+        <!--notice：the type of age is int，it must be convert to String, or it will has exception-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="50sp"
+            android:text="@{String.valueOf(user.age)}" />
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="Button1"
+            android:onClick="@{clickListener}"/>
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="Button2"
+            android:onClick="@{handlerClick::onButton2Click}"/>
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="Button3"
+            android:onClick="@{clickListener}"/>
+    </LinearLayout>
+</layout>
