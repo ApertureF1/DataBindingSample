@@ -1,2 +1,2 @@
 # DataBindingSample
-the sample to record learning data binding of google.
+the sample to record my learning progress on data binding of google.
