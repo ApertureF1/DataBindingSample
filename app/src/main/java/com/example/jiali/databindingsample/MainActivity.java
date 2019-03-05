@@ -27,7 +27,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 
     private void onButton3Click() {
-        Intent intent = new Intent(this, BidirectionBindActivity.class);
+        Intent intent = new Intent(this, SingleDirectionBindActivity.class);
+        startActivity(intent);
+    }
+
+    private void onButton4Click() {
+        Intent intent = new Intent(this, BidirectionalBindActivity.class);
         startActivity(intent);
     }
 
@@ -39,6 +44,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.btn3:
                 onButton3Click();
+                break;
+            case R.id.btn4:
+                onButton4Click();
                 break;
             default:
                 break;

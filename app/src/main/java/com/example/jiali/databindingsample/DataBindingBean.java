@@ -2,7 +2,7 @@ package com.example.jiali.databindingsample;
 
 import android.databinding.ObservableField;
 
-public class BidirectionBindBean {
+public class DataBindingBean {
     //ObservableBoolean, ObservableByte, ObservableChar, ObservableShort, ObservableInt,
     //ObservableLong, ObservableFloat, ObservableDouble, ObservableParcelable
     //ObservableArrayMap, ObservableArrayList

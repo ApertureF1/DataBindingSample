@@ -2,8 +2,8 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
         <variable
-            name="doubleBindBean"
-            type="com.example.jiali.databindingsample.BidirectionBindBean" />
+            name="dataBindingBean"
+            type="com.example.jiali.databindingsample.DataBindingBean" />
 
         <variable
             name="onClickListener"
@@ -22,14 +22,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textSize="50sp"
-            android:text="@{doubleBindBean.userName}" />
+            android:text="@{dataBindingBean.userName}" />
 
-        <Button
-            android:id="@+id/change_content_btn"
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="@{onClickListener}"
-            android:text="Bidirection bind" />
+            android:textSize="50sp"
+            android:text="@={dataBindingBean.userName}" />
 
     </LinearLayout>
 </layout>
