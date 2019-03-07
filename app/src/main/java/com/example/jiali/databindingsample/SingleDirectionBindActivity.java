@@ -17,7 +17,8 @@ public class SingleDirectionBindActivity extends Activity implements View.OnClic
         super.onCreate(savedInstanceState);
         SingleDirectionBindActivityBinding singleDirectionBindActivityBinding = DataBindingUtil.setContentView(this, R.layout.single_direction_bind_activity);
         dataBindingBean = new DataBindingBean();
-        dataBindingBean.userName.set("TOM");
+        dataBindingBean.userName.set("tom");
+        dataBindingBean.user.set(new User("TOM", 12));
         singleDirectionBindActivityBinding.setDataBindingBean(dataBindingBean);
         singleDirectionBindActivityBinding.setOnClickListener(this);
     }
@@ -30,8 +31,10 @@ public class SingleDirectionBindActivity extends Activity implements View.OnClic
                 flag = !flag;
                 if (flag) {
                     dataBindingBean.userName.set("JIM");
+                    dataBindingBean.user.set(new User("JIM", 22));
                 } else {
                     dataBindingBean.userName.set("TOM");
+                    dataBindingBean.user.set(new User("TOM", 22));
                 }
                 break;
         }

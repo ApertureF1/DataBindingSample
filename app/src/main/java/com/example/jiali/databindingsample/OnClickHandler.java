@@ -2,6 +2,7 @@ package com.example.jiali.databindingsample;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 
 public class OnClickHandler {
@@ -12,6 +13,12 @@ public class OnClickHandler {
     }
 
     public void onButton2Click(View view) {
+        Intent intent = new Intent(context, NoneBasicDataActivity.class);
+        context.startActivity(intent);
+    }
+
+    public void onButton2Click(User user) {
+        Log.i("Test","user is: " + user);
         Intent intent = new Intent(context, NoneBasicDataActivity.class);
         context.startActivity(intent);
     }

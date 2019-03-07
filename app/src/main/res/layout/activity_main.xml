@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textSize="50sp"
-            android:text="@{user.name}" />
+            android:text="@{user.name, default=abc}" />
 
         <!--notice：the type of age is int，it must be convert to String, or it will has exception-->
         <TextView
@@ -46,7 +46,8 @@
             android:layout_width="200dp"
             android:layout_height="60dp"
             android:text="Button2"
-            android:onClick="@{handlerClick::onButton2Click}"/>
+            android:onClick="@{()->handlerClick.onButton2Click(user)}"/>
+        <!-- android:onClick="@{handlerClick::onButton2Click}" -->
 
         <Button
             android:id="@+id/btn3"

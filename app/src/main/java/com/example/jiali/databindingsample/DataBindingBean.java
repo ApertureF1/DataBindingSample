@@ -9,4 +9,5 @@ public class DataBindingBean {
 
     //should make it public
     public final ObservableField<String> userName = new ObservableField<>();
+    public final ObservableField<User> user = new ObservableField<>();
 }
