@@ -47,6 +47,7 @@
             android:layout_height="60dp"
             android:text="Button2"
             android:onClick="@{()->handlerClick.onButton2Click(user)}"/>
+        <!-- android:onClick="@{handlerClick.onButton2Click}" -->
         <!-- android:onClick="@{handlerClick::onButton2Click}" -->
 
         <Button

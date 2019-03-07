@@ -13,13 +13,13 @@ public class OnClickHandler {
     }
 
     public void onButton2Click(View view) {
-        Intent intent = new Intent(context, NoneBasicDataActivity.class);
+        Intent intent = new Intent(context, CollectionDataActivity.class);
         context.startActivity(intent);
     }
 
     public void onButton2Click(User user) {
         Log.i("Test","user is: " + user);
-        Intent intent = new Intent(context, NoneBasicDataActivity.class);
+        Intent intent = new Intent(context, CollectionDataActivity.class);
         context.startActivity(intent);
     }
 }

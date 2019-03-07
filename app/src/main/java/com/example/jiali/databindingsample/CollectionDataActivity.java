@@ -5,17 +5,17 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-import com.example.jiali.databindingsample.databinding.NoneBasicDataActivityBinding;
+import com.example.jiali.databindingsample.databinding.CollectionDataActivityBinding;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class NoneBasicDataActivity extends AppCompatActivity {
+public class CollectionDataActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        NoneBasicDataActivityBinding binding = DataBindingUtil.setContentView(this, R.layout.none_basic_data_activity);
+        CollectionDataActivityBinding binding = DataBindingUtil.setContentView(this, R.layout.collection_data_activity);
 
         List<String> list = new ArrayList<>();
         list.add("list1");

@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".BasicDataActivity" />
-        <activity android:name=".NoneBasicDataActivity" />
+        <activity android:name=".CollectionDataActivity" />
         <activity android:name=".SingleDirectionBindActivity" />
         <activity android:name=".BidirectionalBindActivity" />
     </application>
