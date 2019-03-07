@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textSize="50sp"
-            android:visibility="@{age &lt; 13 ? View.GONE : View.VISIBLE}"
+            android:visibility="@{age > 13 ? View.GONE : View.VISIBLE}"
             android:text="@{String.valueOf(age)}"/>
 
         <TextView
