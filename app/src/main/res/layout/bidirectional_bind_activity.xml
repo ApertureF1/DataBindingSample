@@ -4,11 +4,6 @@
         <variable
             name="dataBindingBean"
             type="com.example.jiali.databindingsample.DataBindingBean" />
-
-        <variable
-            name="onClickListener"
-            type="android.view.View.OnClickListener" />
-
     </data>
 
     <LinearLayout
